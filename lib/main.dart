@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  final appTitle = 'Drawer Demo';
+  final appTitle = 'CrossTimer';
 
   @override
   Widget build(BuildContext context) {
@@ -33,13 +33,14 @@ class MyHomePage extends StatelessWidget {
           padding: EdgeInsets.zero,
           children: <Widget>[
             DrawerHeader(
-              child: Text('Drawer Header'),
+              child: Text('Crosstimer'),
               decoration: BoxDecoration(
                 color: Colors.blue,
               ),
             ),
             ListTile(
-              title: Text('Item 1'),
+              title: Text('Zirkel'),
+              trailing: Icon(Icons.settings_backup_restore),
               onTap: () {
                 // Update the state of the app
                 // ...
@@ -48,7 +49,39 @@ class MyHomePage extends StatelessWidget {
               },
             ),
             ListTile(
-              title: Text('Item 2'),
+              title: Text('Timer'),
+              trailing: Icon(Icons.timer),
+              onTap: () {
+                // Update the state of the app
+                // ...
+                // Then close the drawer
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: Text('Interval'),
+              trailing: Icon(Icons.track_changes),
+              onTap: () {
+                // Update the state of the app
+                // ...
+                // Then close the drawer
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: Text('Pyramide'),
+              trailing: Icon(Icons.change_history),
+              onTap: () {
+                // Update the state of the app
+                // ...
+                // Then close the drawer
+                Navigator.pop(context);
+              },
+            ),
+            Divider(),
+            ListTile(
+              title: Text('Settings'),
+              trailing: Icon(Icons.settings),
               onTap: () {
                 // Update the state of the app
                 // ...
