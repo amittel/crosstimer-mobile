@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './circle.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -10,6 +12,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: appTitle,
       home: MyHomePage(title: appTitle),
+       routes: <String, WidgetBuilder>{
+      '/circle': (BuildContext context) => new Circle(),
+      //'/page3': (BuildContext context) => new Page3()
+},
     );
   }
 }
@@ -42,10 +48,8 @@ class MyHomePage extends StatelessWidget {
               title: Text('Zirkel'),
               trailing: Icon(Icons.settings_backup_restore),
               onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
+                Navigator.of(context).pop();
+                Navigator.of(context).pushNamed('/circle');
               },
             ),
             ListTile(
