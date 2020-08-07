@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: appTitle,
+      theme: ThemeData(fontFamily: 'Sansation'),
       home: MyHomePage(title: appTitle),
        routes: <String, WidgetBuilder>{
       '/circle': (BuildContext context) => new Circle(),
